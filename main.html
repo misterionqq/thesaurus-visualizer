@@ -1,0 +1,98 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html lang="en">
+	<head>
+		<link rel="stylesheet" href="styles/styles.css">
+		<meta charset="utf-8">
+		<title>Визуализация тезауруса</title>
+		<script type="text/javascript" src="scripts/d3-v2.js"></script>
+		<script type="text/javascript" src="scripts/data-checker.js"></script>
+		<script type="text/javascript" src="scripts/jquery.js"></script>
+	</head>
+	<body bgcolor ="#f0f0f0">
+		<field href="#" class = "Content-Field">
+		<form id="form" method="POST">
+		<textarea id = "textToAnalyse" name="textcontent" cols="135" rows="15" placeholder="Вставте текст..."></textarea>
+		<a href="#" class="bAnalyse" onclick="analyse();">Анализировать</a>
+		</form>
+		<c href ="#" class="Buttons">
+		<b href="#" class="Gtext">Методы построения графа</b>
+		<label class="container">Часть речи
+			<input type="radio" checked="checked" name="radio" id="POSRadio">
+			<span class="checkmark"></span>
+		  </label>
+		  <label class="container">Падеж
+			<input type="radio" checked="checked" name="radio" id="caseRadio">
+			<span class="checkmark"></span>
+		  </label>
+		  <label class="container">Число
+			<input type="radio" checked="checked" name="radio" id="numberRadio">
+			<span class="checkmark"></span>
+		  </label>
+		  <label class="container">Род
+			<input type="radio" checked="checked" name="radio" id="genderRadio">
+			<span class="checkmark"></span>
+		  </label>
+		  <label class="container">Одушевленность
+			<input type="radio" checked="checked" name="radio" id="animacyRadio">
+			<span class="checkmark"></span>
+		  </label>
+		  <label class="container">Количество слов
+			<input type="radio" checked="checked" name="radio" id="wordCountRadio">
+			<span class="checkmark"></span>
+		  </label>
+		  <label class="container">Важность слов
+			<input type="radio" checked="checked" name="radio" id="wordImpRadio">
+			<span class="checkmark"></span>
+		  </label></c>
+		  <a href="#" class="bAnalyse" onclick="buildFromReady();">Перестроить</a></field>
+	<d>
+			<label>
+				<div class="clr red">
+					<p id="clrText">Существительное ед.</p>
+				</div>
+			</label>
+			<label>
+			<div class="clr viol">
+					<p id="clrText">Существительное множ.</p>
+				</div>
+			</label>
+			<label>
+				<div class="clr green">
+						<p id="clrText">Фраза из 2 слов</p>
+					</div>
+			</label>
+			<label>
+				<div class="clr orange">
+						<p id="clrText">Фраза из 3 слов</p>
+					</div>
+			</label>
+			<label>
+				<div class="clr black">
+						<p id="clrText">В фразе больше 3 слов</p>
+					</div>
+			</label>
+			<label>
+				<div class="clr yellow">
+						<p id="clrText">Прилагательное</p>
+					</div>
+			</label>
+			<label>
+				<div class="clr blue">
+						<p id="clrText">Глагол</p>
+					</div>
+			</label>
+			<label>
+				<div class="clr aqua">
+						<p id="clrText">Наречие</p>
+					</div>
+			</label>
+			<label>
+				<div class="clr gray">
+						<p id="clrText">Не определено</p>
+					</div>
+			</label>
+	</d>
+	<div align ="center" id="graph"></div>
+	<script src="scripts/graph_bulder.js"></script>
+	</bodybgcolor="#c0c0c0">
+</html>
